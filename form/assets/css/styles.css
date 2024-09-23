@@ -1,0 +1,20 @@
+.hidden {
+    display: none;
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.circle.active {
+    background-color: #ff8a00;
+}
+
+.bg-button {
+    background-color: #1c262f;
+}

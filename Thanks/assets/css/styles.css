@@ -1,0 +1,15 @@
+@import url('https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css');
+
+/* Custom styles */
+.bg-primary {
+    background-color: #1c262f;
+}
+.bg-secondary {
+    background-color: #ff8a00;
+}
+.text-primary {
+    color: #1c262f;
+}
+.text-secondary {
+    color: #ff8a00;
+}

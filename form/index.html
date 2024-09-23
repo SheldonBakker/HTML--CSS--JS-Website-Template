@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi-Step Form</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="icon" href="assets/images/favicon.ico">
+</head>
+
+<body class="bg-custom flex items-center justify-center min-h-screen">
+    <div class="w-full max-w-4xl p-8 bg-white shadow-lg rounded-lg">
+        <h2 class="text-2xl font-semibold text-gray-800 mb-6 text-center">Get Connected Now</h2>
+
+        <form id="multiStepForm" method="POST" action="form-handler.php" class="space-y-6">
+<!-- Step 1 -->
+<div id="step-1" class="form-section">
+    <div class="flex flex-wrap -mx-3 mb-6">
+        <div class="w-full md:w-1/2 px-3">
+            <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
+            <input type="text" id="name" name="name" required
+                class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500">
+        </div>
+
+        <div class="w-full md:w-1/2 px-3">
+            <label for="surname" class="block text-sm font-medium text-gray-700">Surname</label>
+            <input type="text" id="surname" name="surname" required
+                class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500">
+        </div>
+    </div>
+
+    <div class="flex flex-wrap -mx-3 mb-6">
+        <div class="w-full md:w-1/2 px-3">
+            <label for="phone" class="block text-sm font-medium text-gray-700">Phone Number</label>
+            <input type="tel" id="phone" name="phone" required
+                class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500">
+        </div>
+
+        <div class="w-full md:w-1/2 px-3">
+            <label for="id_number" class="block text-sm font-medium text-gray-700">ID Number</label>
+            <input type="text" id="id_number" name="id_number" required
+                class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500">
+        </div>
+    </div>
+
+    <div class="flex flex-wrap -mx-3 mb-6">
+        <div class="w-full px-3">
+            <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+            <input type="email" id="email" name="email" required
+                class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500">
+        </div>
+    </div>
+
+    <div class="flex justify-between">
+        <button type="button" class="bg-button hover:bg-orange-600 text-white px-4 py-2 rounded-md" id="next-1">
+            Next
+        </button>
+    </div>
+</div>
+
+
+            <!-- Step 2 -->
+            <div id="step-2" class="form-section hidden">
+                <div class="flex flex-wrap -mx-3 mb-6">
+                    <div class="w-full md:w-1/2 px-3">
+                        <label for="street_address" class="block text-sm font-medium text-gray-700">Street Address</label>
+                        <input type="text" id="street_address" name="street_address" required
+                            class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500">
+                    </div>
+
+                    <div class="w-full md:w-1/2 px-3">
+                        <label for="house_unit_number" class="block text-sm font-medium text-gray-700">House/Unit Number</label>
+                        <input type="text" id="house_unit_number" name="house_unit_number" required
+                            class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500">
+                    </div>
+
+                    <div class="w-full md:w-1/2 px-3 mt-4">
+                        <label for="complex_name" class="block text-sm font-medium text-gray-700">Complex Name (Optional)</label>
+                        <input type="text" id="complex_name" name="complex_name"
+                            class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500">
+                    </div>
+                </div>
+
+                <div class="flex flex-wrap -mx-3 mb-6">
+                    <div class="w-full md:w-1/2 px-3">
+                        <label for="residence_type" class="block text-sm font-medium text-gray-700">Residence Type</label>
+                        <select id="residence_type" name="residence_type" required
+                            class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500">
+                            <option value="">Select Residence Type</option>
+                            <option value="Complex">Complex</option>
+                            <option value="Free Standing">Free Standing</option>
+                        </select>
+                    </div>
+
+                    <div class="w-full md:w-1/2 px-3">
+                        <label for="city" class="block text-sm font-medium text-gray-700">City</label>
+                        <input type="text" id="city" name="city" required
+                            class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500">
+                    </div>
+                </div>
+
+                <div class="flex flex-wrap -mx-3 mb-6">
+                    <div class="w-full md:w-1/2 px-3">
+                        <label for="province" class="block text-sm font-medium text-gray-700">Province</label>
+                        <input type="text" id="province" name="province" required
+                            class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500">
+                    </div>
+
+                    <div class="w-full md:w-1/2 px-3">
+                        <label for="postcode" class="block text-sm font-medium text-gray-700">Postcode/Zip</label>
+                        <input type="text" id="postcode" name="postcode" required
+                            class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500">
+                    </div>
+                </div>
+
+                <div class="mb-6">
+                    <label for="country" class="block text-sm font-medium text-gray-700">Country</label>
+                    <input type="text" id="country" name="country" required
+                        class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500">
+                </div>
+
+                <div class="flex justify-between">
+                    <button type="button" class="bg-button hover:bg-orange-600 text-white px-4 py-2 rounded-md" id="prev-2">
+                        Previous
+                    </button>
+                    <button type="button" class="bg-button hover:bg-orange-600 text-white px-4 py-2 rounded-md" id="next-2">
+                        Next
+                    </button>
+                </div>
+            </div>
+
+            <!-- Step 3 -->
+            <div id="step-3" class="form-section hidden">
+                <div class="flex flex-wrap -mx-3 mb-6">
+                    <div class="w-full md:w-1/2 px-3">
+                        <label for="bank" class="block text-sm font-medium text-gray-700">Bank</label>
+                        <select id="bank" name="bank" required
+                            class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500">
+                            <option value="">Select Your Bank</option>
+                            <option value="ABSA">ABSA</option>
+                            <option value="Capitec">Capitec</option>
+                            <option value="FNB">FNB</option>
+                            <option value="Investec">Investec</option>
+                            <option value="Nedbank">Nedbank</option>
+                            <option value="Standard Bank">Standard Bank</option>
+                            <option value="TymeBank">TymeBank</option>
+                        </select>
+                    </div>
+
+                    <div class="w-full md:w-1/2 px-3">
+                        <label for="account_number" class="block text-sm font-medium text-gray-700">Account Number</label>
+                        <input type="text" id="account_number" name="account_number" required
+                            class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500">
+                    </div>
+                </div>
+
+                <div class="mb-6">
+                    <label for="account_type" class="block text-sm font-medium text-gray-700">Account Type</label>
+                    <select id="account_type" name="account_type" required
+                        class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500">
+                        <option value="">Select Account Type</option>
+                        <option value="Checking">Checking</option>
+                        <option value="Savings">Savings</option>
+                        <option value="Business">Business</option>
+                    </select>
+                </div>
+
+                <div class="flex justify-between">
+                    <button type="button" class="bg-button hover:bg-orange-600 text-white px-4 py-2 rounded-md" id="prev-3">
+                        Previous
+                    </button>
+                    <button type="submit" class="bg-button hover:bg-orange-600 text-white px-4 py-2 rounded-md">
+                        Submit
+                    </button>
+                </div>
+            </div>
+        </form>
+
+        <!-- Circles indicating the steps -->
+        <div class="flex justify-center mt-8">
+            <div class="circle bg-gray-400 w-4 h-4 rounded-full mx-1"></div>
+            <div class="circle bg-gray-400 w-4 h-4 rounded-full mx-1"></div>
+            <div class="circle bg-gray-400 w-4 h-4 rounded-full mx-1"></div>
+        </div>
+    </div>
+
+    <script src="assets/js/script.js"></script> <!-- Link to your custom JavaScript -->
+</body>
+
+</html>

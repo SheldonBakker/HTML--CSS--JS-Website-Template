@@ -1,0 +1,18 @@
+/* Custom Styles for Menu Items */
+.menu-item {
+    @apply text-lg px-4 py-2 rounded-full transition-colors duration-300;
+}
+
+.menu-item:hover {
+    @apply bg-[#ff8a00] text-white;
+}
+
+/* Smooth Scroll Effect */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Header styling */
+header {
+    @apply shadow-md;
+}
